@@ -82,18 +82,28 @@
                 </div>
             </a>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-1 bg-brand-surface p-1.5 rounded-full border border-brand-border">
-                <button id="nav-home" onclick="switchPage('home')" class="px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 bg-brand-accent text-brand-bg shadow-sm">
-                    Positioning
-                </button>
-                <button id="nav-proof" onclick="switchPage('proof')" class="px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 text-brand-textMuted hover:text-brand-textPrimary">
-                    Before & After
-                </button>
-                <button id="nav-method" onclick="switchPage('method')" class="px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 text-brand-textMuted hover:text-brand-textPrimary">
-                    The Method
-                </button>
-            </nav>
+            <!-- Navigation Links & Language Switcher -->
+            <div class="hidden md:flex items-center gap-4">
+                <nav class="flex items-center gap-1 bg-brand-surface p-1.5 rounded-full border border-brand-border">
+                    <button id="nav-home" onclick="switchPage('home')" class="px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 bg-brand-accent text-brand-bg shadow-sm">
+                        Positioning
+                    </button>
+                    <button id="nav-proof" onclick="switchPage('proof')" class="px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 text-brand-textMuted hover:text-brand-textPrimary">
+                        Before & After
+                    </button>
+                    <button id="nav-method" onclick="switchPage('method')" class="px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 text-brand-textMuted hover:text-brand-textPrimary">
+                        The Method & Pricing
+                    </button>
+                </nav>
+
+                <!-- Language Switcher -->
+                <div class="bg-brand-surface px-4 py-2 rounded-full border border-brand-border font-mono text-xs text-brand-accent tracking-widest flex items-center gap-2">
+                    <a href="index.html" class="text-brand-textPrimary font-bold">EN</a><span>|</span>
+                    <a href="it.html" class="text-brand-textMuted hover:text-brand-textPrimary">IT</a><span>|</span>
+                    <a href="fr.html" class="text-brand-textMuted hover:text-brand-textPrimary">FR</a><span>|</span>
+                    <a href="es.html" class="text-brand-textMuted hover:text-brand-textPrimary">ES</a>
+                </div>
+            </div>
 
             <a href="#audit" onclick="scrollToAudit(event)" class="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-brand-bg bg-brand-accent hover:bg-brand-accentHover transition-all duration-200 shadow-md">
                 <span>Audit Request</span>
@@ -108,6 +118,12 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-surface border-b border-brand-border px-6 py-4 flex flex-col gap-3">
+            <div class="flex justify-center gap-3 py-2 border-b border-brand-border font-mono text-xs text-brand-accent">
+                <a href="index.html" class="text-brand-textPrimary font-bold">EN</a> |
+                <a href="it.html" class="text-brand-textMuted">IT</a> |
+                <a href="fr.html" class="text-brand-textMuted">FR</a> |
+                <a href="es.html" class="text-brand-textMuted">ES</a>
+            </div>
             <button onclick="switchPage('home'); toggleMobileMenu();" class="text-left py-2 text-sm font-semibold uppercase tracking-wider text-brand-accent flex items-center justify-between">
                 <span>Positioning & Overview</span>
                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
@@ -117,7 +133,7 @@
                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </button>
             <button onclick="switchPage('method'); toggleMobileMenu();" class="text-left py-2 text-sm font-semibold uppercase tracking-wider text-brand-textMuted hover:text-brand-textPrimary flex items-center justify-between">
-                <span>The Solo Method & Pricing</span>
+                <span>The Method & Pricing</span>
                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </button>
             <a href="#audit" onclick="scrollToAudit(event); toggleMobileMenu();" class="mt-2 text-center py-3 bg-brand-accent text-brand-bg rounded-lg text-xs font-semibold uppercase tracking-wider">
@@ -131,17 +147,23 @@
         <!-- VIEW 1: HOME / POSITIONING -->
         <div id="view-home" class="page-view block">
             
-            <!-- Hero Section -->
+            <!-- Hero Section with Lake Como Background Image -->
             <section class="relative min-h-[85vh] flex items-center justify-center py-20 px-6 overflow-hidden border-b border-brand-border/50">
-                <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
+                <!-- Lake Como Background Photo with Cinematic Dark Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=2000&q=85" alt="Lake Como Vista" class="w-full h-full object-cover object-center scale-105 filter brightness-[0.35] contrast-125">
+                    <div class="absolute inset-0 bg-gradient-to-b from-brand-bg/80 via-brand-bg/60 to-brand-bg"></div>
+                </div>
+
+                <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
                 <div class="max-w-5xl mx-auto text-center z-10">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent text-xs font-mono uppercase tracking-widest mb-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-accent/15 border border-brand-accent/40 text-brand-accent text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md">
                         <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
                         Independent Narrative Strategist • Italy
                     </div>
                     
-                    <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.08] tracking-tight text-brand-textPrimary mb-8">
+                    <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.08] tracking-tight text-brand-textPrimary mb-8 drop-shadow-md">
                         I Rewrite How The World Sees Italy’s Most Exclusive Estates & Luxury Hotels.
                     </h1>
 
@@ -154,22 +176,22 @@
                             <span>Request a Confidential Audit</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <button onclick="switchPage('proof')" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-card border border-brand-border text-brand-textPrimary font-semibold text-xs tracking-widest uppercase hover:border-brand-accent/50 transition-all duration-300">
+                        <button onclick="switchPage('proof')" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-card/80 backdrop-blur-md border border-brand-border text-brand-textPrimary font-semibold text-xs tracking-widest uppercase hover:border-brand-accent/50 transition-all duration-300">
                             View Narrative Transformations
                         </button>
                     </div>
 
                     <!-- Authority Bar -->
                     <div class="mt-20 pt-10 border-t border-brand-border/40 grid grid-cols-1 md:grid-cols-3 gap-6 text-center font-mono uppercase tracking-widest">
-                        <div class="p-4 rounded-xl bg-brand-surface/50 border border-brand-border/60">
+                        <div class="p-4 rounded-xl bg-brand-surface/60 backdrop-blur-md border border-brand-border/60">
                             <span class="block text-brand-accent font-serif text-3xl font-bold mb-1">7 to 8</span>
                             <span class="text-[11px] text-brand-textMuted">Client Engagements Selected Per Year</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-brand-surface/50 border border-brand-border/60">
+                        <div class="p-4 rounded-xl bg-brand-surface/60 backdrop-blur-md border border-brand-border/60">
                             <span class="block text-brand-textPrimary font-serif text-3xl font-bold mb-1">€0</span>
                             <span class="text-[11px] text-brand-textMuted">Agency Overhead — 100% Principal Execution</span>
                         </div>
-                        <div class="p-4 rounded-xl bg-brand-surface/50 border border-brand-border/60">
+                        <div class="p-4 rounded-xl bg-brand-surface/60 backdrop-blur-md border border-brand-border/60">
                             <span class="block text-brand-accent font-serif text-3xl font-bold mb-1">100%</span>
                             <span class="text-[11px] text-brand-textMuted">Lake Como • Tuscany • Amalfi • Sardinia</span>
                         </div>
@@ -177,28 +199,28 @@
                 </div>
             </section>
 
-            <!-- Section: The Problem with Italian Agency Translations -->
+            <!-- Section: The AI Booking Threat & Translation Diagnosis -->
             <section class="py-24 px-6 max-w-7xl mx-auto border-b border-brand-border/50">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div class="lg:col-span-5 sticky top-28">
-                        <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">01 / The Diagnosis</span>
+                        <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">01 / The Diagnosis & AI Indexing</span>
                         <h2 class="font-serif text-3xl sm:text-5xl leading-tight text-brand-textPrimary mb-6">
-                            Literal translation is losing your luxury estate millions.
+                            The silent cost of AI discovery and literal translation.
                         </h2>
                         <p class="text-brand-textMuted font-light text-base leading-relaxed mb-6">
-                            When an Italian luxury property hires a standard agency, they get word-for-word accuracy, but lose 100% of the emotional prestige.
+                            Modern high-net-worth travelers no longer browse standard search indexes; they query AI concierge platforms, Apple Intelligence, and LLMs to curate bespoke Italian stays.
                         </p>
                         <p class="text-brand-textMuted font-light text-base leading-relaxed">
-                            An American or British HNW traveler spending €3,000/night does not book "an oasis of peace surrounded by nature." They book **curated privacy, historic weight, and effortless elegance.**
+                            When AI engines crawl a luxury property website and detect literal machine translations or generic phrasing, they misclassify the estate, lowering its perceived standing and pushing premium rates down into mid-scale search results.
                         </p>
                     </div>
 
                     <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="p-8 rounded-2xl bg-brand-card border border-brand-border">
                             <div class="w-10 h-10 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-sm mb-6">✕</div>
-                            <h3 class="font-serif text-xl text-brand-textPrimary mb-3">The Agency Trap</h3>
+                            <h3 class="font-serif text-xl text-brand-textPrimary mb-3">The AI Penalty</h3>
                             <p class="text-xs text-brand-textMuted leading-relaxed">
-                                Agencies pass your copy down to junior translators who use dry dictionary definitions. It sounds generic, passive, and identical to every 3-star bed & breakfast.
+                                AI algorithms evaluate tone and linguistic precision. Poor or literal English signals a lower service tier, causing automated travel advisors to overlook your property.
                             </p>
                         </div>
 
@@ -206,7 +228,7 @@
                             <div class="w-10 h-10 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-sm mb-6">✕</div>
                             <h3 class="font-serif text-xl text-brand-textPrimary mb-3">Cliché Fluff</h3>
                             <p class="text-xs text-brand-textMuted leading-relaxed">
-                                Overusing hollow adjectives like "enchanting structure", "equipped with all comforts", and "breathtaking views" that alienate sophisticated native speakers.
+                                Relying on hollow phrases like "equipped with all comforts" and "enchanting structure" that alienate sophisticated native buyers from London, New York, and Zurich.
                             </p>
                         </div>
 
@@ -214,7 +236,7 @@
                             <div class="w-10 h-10 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center font-bold text-sm mb-6">✓</div>
                             <h3 class="font-serif text-2xl text-brand-textPrimary mb-3">Native Strategic Positioning</h3>
                             <p class="text-sm text-brand-textMuted leading-relaxed">
-                                I rewrite your brand narrative from the ground up using native English luxury codes tailored to high-net-worth buyers from London, New York, and Zurich.
+                                I rewrite your brand narrative from the ground up to ensure absolute authority across both human buyers and AI discovery engines—positioning your estate at its true commercial caliber.
                             </p>
                         </div>
                     </div>
@@ -235,19 +257,22 @@
 
                 <!-- Interactive Case Studies -->
                 <div class="space-y-12">
-
-                    <!-- EXAMPLE 1 -->
+                    <!-- EXAMPLE 1 WITH LAKE COMO IMAGE -->
                     <div class="bg-brand-card rounded-3xl border border-brand-border overflow-hidden p-8 sm:p-12">
                         <div class="flex flex-col lg:flex-row justify-between items-start gap-6 mb-8 border-b border-brand-border pb-6">
                             <div>
                                 <span class="text-xs font-mono text-brand-accent uppercase tracking-widest">Case Study #01 • Lake Como</span>
                                 <h3 class="font-serif text-3xl text-brand-textPrimary mt-1">Historic Waterfront Palazzo</h3>
                             </div>
-                            <!-- Toggle Button -->
                             <div class="flex items-center gap-2 bg-brand-bg p-1.5 rounded-full border border-brand-border">
                                 <button onclick="setStudioMode('ex1', 'after')" id="ex1-after-btn" class="px-5 py-2 rounded-full text-xs font-semibold bg-brand-accent text-brand-bg transition-all">Henri's Rewrite</button>
                                 <button onclick="setStudioMode('ex1', 'before')" id="ex1-before-btn" class="px-5 py-2 rounded-full text-xs font-semibold text-brand-textMuted transition-all">Agency Fluff</button>
                             </div>
+                        </div>
+
+                        <!-- Lake Como Case Study Image -->
+                        <div class="mb-8 overflow-hidden rounded-2xl border border-brand-border/60">
+                            <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1400&q=80" alt="Lake Como Historic Villa" class="w-full h-72 sm:h-96 object-cover object-center filter brightness-90 hover:scale-105 transition-transform duration-700">
                         </div>
 
                         <div id="ex1-after-box" class="bg-brand-surface p-8 rounded-2xl border border-brand-accent/30">
@@ -274,7 +299,6 @@
                                 <span class="text-xs font-mono text-brand-accent uppercase tracking-widest">Case Study #02 • Tuscany</span>
                                 <h3 class="font-serif text-3xl text-brand-textPrimary mt-1">Private Wine Estate & Borgo</h3>
                             </div>
-                            <!-- Toggle Button -->
                             <div class="flex items-center gap-2 bg-brand-bg p-1.5 rounded-full border border-brand-border">
                                 <button onclick="setStudioMode('ex2', 'after')" id="ex2-after-btn" class="px-5 py-2 rounded-full text-xs font-semibold bg-brand-accent text-brand-bg transition-all">Henri's Rewrite</button>
                                 <button onclick="setStudioMode('ex2', 'before')" id="ex2-before-btn" class="px-5 py-2 rounded-full text-xs font-semibold text-brand-textMuted transition-all">Agency Fluff</button>
@@ -297,19 +321,18 @@
                             <p class="text-xs text-red-300/70">Flaw: Downgrades a high-end estate to a generic farm stay experience.</p>
                         </div>
                     </div>
-
                 </div>
             </section>
         </div>
 
-        <!-- VIEW 3: THE METHOD & INVESTMENT STRUCTURE -->
+        <!-- VIEW 3: THE METHOD & PROJECT-BASED INVESTMENT STRUCTURE -->
         <div id="view-method" class="page-view hidden">
             <section class="py-20 px-6 max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">03 / Operating Philosophy</span>
-                    <h2 class="font-serif text-4xl sm:text-6xl text-brand-textPrimary mb-6">Why I Work Solo</h2>
+                    <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">03 / Operating Philosophy & Scope</span>
+                    <h2 class="font-serif text-4xl sm:text-6xl text-brand-textPrimary mb-6">Project-by-Project Investment</h2>
                     <p class="text-brand-textMuted font-light text-base leading-relaxed">
-                        I purposefully limit my practice to **exactly 7 to 8 client engagements per year**. No accounts managers, no junior delegates—100% direct execution by Henri Galli.
+                        I am not a translator. I am a professional luxury copywriter and brand narrative strategist. Every mandate is custom-tailored on a project-by-project basis.
                     </p>
                 </div>
 
@@ -321,31 +344,31 @@
                                 <span class="px-3 py-1 rounded-full bg-brand-surface text-[11px] font-mono text-brand-accent uppercase">Primary Mandate</span>
                                 <i data-lucide="file-text" class="w-6 h-6 text-brand-accent"></i>
                             </div>
-                            <h3 class="font-serif text-3xl text-brand-textPrimary mb-3">Website Narrative Overhaul</h3>
+                            <h3 class="font-serif text-3xl text-brand-textPrimary mb-3">Complete Website Narrative Overhaul</h3>
                             <p class="text-xs text-brand-textMuted leading-relaxed mb-6">
-                                Complete rewrite of your website’s core copy based on total word count and property complexity.
+                                Full website narrative restructuring, brand positioning, and copy reframing. Pricing is quoted strictly on a project-by-project basis depending on site architecture, page volume, and property complexity—never per word.
                             </p>
                         </div>
                         <div class="pt-6 border-t border-brand-border">
                             <span class="text-xs text-brand-textMuted font-mono block">Investment Model</span>
-                            <span class="text-xl font-serif text-brand-accent font-semibold">Transparent Word-Based Rates</span>
+                            <span class="text-xl font-serif text-brand-accent font-semibold">Custom Project Scope & Pricing</span>
                         </div>
                     </div>
 
                     <div class="p-8 rounded-2xl bg-brand-card border border-brand-border flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-start mb-6">
-                                <span class="px-3 py-1 rounded-full bg-brand-surface text-[11px] font-mono text-brand-accent uppercase">Optional Add-On</span>
+                                <span class="px-3 py-1 rounded-full bg-brand-surface text-[11px] font-mono text-brand-accent uppercase">Optional Advisory Support</span>
                                 <i data-lucide="headphones" class="w-6 h-6 text-brand-accent"></i>
                             </div>
-                            <h3 class="font-serif text-3xl text-brand-textPrimary mb-3">Operational Concierge Support</h3>
+                            <h3 class="font-serif text-3xl text-brand-textPrimary mb-3">Operational Concierge & Support</h3>
                             <p class="text-xs text-brand-textMuted leading-relaxed mb-6">
-                                Separate ongoing retainer support for guest desk communications, seasonal menus, and VIP correspondence.
+                                Separate ongoing native desk support, VIP correspondence, and seasonal narrative reviews. Main website builds and ongoing support desks are maintained as entirely separate agreements.
                             </p>
                         </div>
                         <div class="pt-6 border-t border-brand-border">
                             <span class="text-xs text-brand-textMuted font-mono block">Investment Model</span>
-                            <span class="text-xl font-serif text-brand-accent font-semibold">Separate Monthly Retainer</span>
+                            <span class="text-xl font-serif text-brand-accent font-semibold">Separate Monthly Retainer Option</span>
                         </div>
                     </div>
                 </div>
@@ -359,7 +382,7 @@
                     <span class="text-xs font-mono text-brand-accent uppercase tracking-widest block mb-2">Direct Engagement</span>
                     <h2 class="font-serif text-3xl sm:text-5xl text-brand-textPrimary mb-4">Request a Narrative Audit</h2>
                     <p class="text-xs sm:text-sm text-brand-textMuted">
-                        Submit your details below to receive a confidential review of your property’s current English narrative footprint.
+                        Submit your details below to receive a confidential review of your property’s English narrative footprint and AI discovery index.
                     </p>
                 </div>
 
@@ -441,13 +464,9 @@
 
     <!-- JavaScript Logic -->
     <script>
-        // Initialize Lucide Icons
         lucide.createIcons();
-
-        // Update Dynamic Year
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Page Navigation Switcher
         function switchPage(pageId) {
             const pages = ['home', 'proof', 'method'];
             pages.forEach(p => {
@@ -470,20 +489,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Smooth Scroll to Audit Section
-        function scrollToAudit(e) {
-            e.preventDefault();
-            const audit = document.getElementById('audit');
-            audit.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Toggle Before & After Studio Mode
         function setStudioMode(exId, mode) {
             const afterBox = document.getElementById(`${exId}-after-box`);
             const beforeBox = document.getElementById(`${exId}-before-box`);
@@ -498,12 +503,21 @@
             } else {
                 beforeBox.classList.remove('hidden');
                 afterBox.classList.add('hidden');
-                beforeBtn.className = "px-5 py-2 rounded-full text-xs font-semibold bg-red-900/40 text-red-300 border border-red-700/50 transition-all";
+                beforeBtn.className = "px-5 py-2 rounded-full text-xs font-semibold bg-brand-accent text-brand-bg transition-all";
                 afterBtn.className = "px-5 py-2 rounded-full text-xs font-semibold text-brand-textMuted transition-all";
             }
         }
 
-        // Audit Form Submission
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function scrollToAudit(e) {
+            e.preventDefault();
+            document.getElementById('audit').scrollIntoView({ behavior: 'smooth' });
+        }
+
         function handleAuditSubmit(e) {
             e.preventDefault();
             document.getElementById('audit-form').classList.add('hidden');
