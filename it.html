@@ -19,15 +19,15 @@
                 extend: {
                     colors: {
                         brand: {
-                            bg: '#0D0D0D',
-                            surface: '#141416',
-                            card: '#1A1A1E',
-                            cardHover: '#222228',
-                            accent: '#C5A059',
-                            accentHover: '#D8B46C',
-                            textPrimary: '#F5F4F0',
-                            textMuted: '#9E9C96',
-                            border: '#2A2A30'
+                            bg: '#121215',
+                            surface: '#1A1A1F',
+                            card: '#22222A',
+                            cardHover: '#2A2A34',
+                            accent: '#D4AF37',
+                            accentHover: '#E5C158',
+                            textPrimary: '#F8F7F4',
+                            textMuted: '#A09E98',
+                            border: '#2E2E38'
                         }
                     },
                     fontFamily: {
@@ -40,32 +40,29 @@
     </script>
     <style>
         body {
-            background-color: #0D0D0D;
-            color: #F5F4F0;
+            background-color: #121215;
+            color: #F8F7F4;
             font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
         }
-        .glow-accent {
-            box-shadow: 0 0 40px -10px rgba(197, 160, 89, 0.15);
-        }
         .gold-border-glow:focus {
             outline: none;
-            border-color: #C5A059;
-            box-shadow: 0 0 15px rgba(197, 160, 89, 0.25);
+            border-color: #D4AF37;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
         }
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #0D0D0D;
+            background: #121215;
         }
         ::-webkit-scrollbar-thumb {
-            background: #2A2A30;
+            background: #2E2E38;
             border-radius: 3px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #C5A059;
+            background: #D4AF37;
         }
     </style>
 </head>
@@ -92,7 +89,7 @@
                         Prima e Dopo
                     </button>
                     <button id="nav-method" onclick="switchPage('method')" class="px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 text-brand-textMuted hover:text-brand-textPrimary">
-                        Metodo e Tariffe
+                        Processo e Ambito
                     </button>
                 </nav>
 
@@ -133,7 +130,7 @@
                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </button>
             <button onclick="switchPage('method'); toggleMobileMenu();" class="text-left py-2 text-sm font-semibold uppercase tracking-wider text-brand-textMuted hover:text-brand-textPrimary flex items-center justify-between">
-                <span>Metodo e Tariffe</span>
+                <span>Processo e Ambito</span>
                 <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </button>
             <a href="#audit" onclick="scrollToAudit(event); toggleMobileMenu();" class="mt-2 text-center py-3 bg-brand-accent text-brand-bg rounded-lg text-xs font-semibold uppercase tracking-wider">
@@ -150,24 +147,22 @@
             <!-- Hero Section -->
             <section class="relative min-h-[85vh] flex items-center justify-center py-20 px-6 overflow-hidden border-b border-brand-border/50">
                 <div class="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=2000&q=85" alt="Lago di Como" class="w-full h-full object-cover object-center scale-105 filter brightness-[0.35] contrast-125">
+                    <img src="https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=2000&q=85" alt="Vista Lago di Como" class="w-full h-full object-cover object-center scale-105 filter brightness-[0.35] contrast-125">
                     <div class="absolute inset-0 bg-gradient-to-b from-brand-bg/80 via-brand-bg/60 to-brand-bg"></div>
                 </div>
-
-                <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
 
                 <div class="max-w-5xl mx-auto text-center z-10">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-accent/15 border border-brand-accent/40 text-brand-accent text-xs font-mono uppercase tracking-widest mb-8 backdrop-blur-md">
                         <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
-                        Strategia Narrativa • Area Mediterranea
+                        Strategia Narrativa Indipendente • Italia • Francia • Spagna
                     </div>
                     
                     <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal leading-[1.08] tracking-tight text-brand-textPrimary mb-8 drop-shadow-md">
                         Dai rifugi di charme ai santuari di ultra-lusso.
                     </h1>
 
-                    <p class="max-w-2xl mx-auto text-lg sm:text-xl text-brand-textMuted font-light leading-relaxed mb-12">
-                        Ridefinisco il posizionamento narrativo di hotel d'eccezione, dimore e immobili di pregio tra Italia, Francia e Spagna, trasformando descrizioni ordinarie in autorevolezza di mercato. Senza agenzie intermedie, con esecuzione diretta in inglese madrelingua.
+                    <p class="max-w-3xl mx-auto text-lg sm:text-xl text-brand-textMuted font-light leading-relaxed mb-12">
+                        Riprogetto l'impronta narrativa in lingua inglese per hotel d'eccezione, dimore storiche e immobili di pregio tra Italia, Francia e Spagna—trasformando descrizioni ordinarie in autorevolezza di mercato riconosciuta sia dai clienti internazionali che dai motori di ricerca IA.
                     </p>
 
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
@@ -176,108 +171,152 @@
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                         <button onclick="switchPage('proof')" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-card/80 backdrop-blur-md border border-brand-border text-brand-textPrimary font-semibold text-xs tracking-widest uppercase hover:border-brand-accent/50 transition-all duration-300">
-                            Visualizza le Trasformazioni
+                            Vedi le Trasformazioni
                         </button>
                     </div>
 
                     <!-- Authority Bar -->
                     <div class="mt-20 pt-10 border-t border-brand-border/40 grid grid-cols-1 md:grid-cols-3 gap-6 text-center font-mono uppercase tracking-widest">
                         <div class="p-4 rounded-xl bg-brand-surface/60 backdrop-blur-md border border-brand-border/60">
-                            <span class="block text-brand-accent font-serif text-3xl font-bold mb-1">7 a 8</span>
-                            <span class="text-[11px] text-brand-textMuted">Mandati Selezionati all'Anno</span>
-                        </div>
-                        <div class="p-4 rounded-xl bg-brand-surface/60 backdrop-blur-md border border-brand-border/60">
-                            <span class="block text-brand-textPrimary font-serif text-3xl font-bold mb-1">€0</span>
-                            <span class="text-[11px] text-brand-textMuted">Costi di Agenzia — Esecuzione 100% Diretta</span>
-                        </div>
-                        <div class="p-4 rounded-xl bg-brand-surface/60 backdrop-blur-md border border-brand-border/60">
                             <span class="block text-brand-accent font-serif text-3xl font-bold mb-1">100%</span>
+                            <span class="text-[11px] text-brand-textMuted">Esecuzione Diretta — Nessun Team Junior</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-surface/60 backdrop-blur-md border border-brand-border/60">
+                            <span class="block text-brand-textPrimary font-serif text-3xl font-bold mb-1">Sito Completo</span>
+                            <span class="text-[11px] text-brand-textMuted">Ristrutturazione Narrativa e Posizionamento</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-accent font-serif text-3xl font-bold mb-1">
+                            <span class="block text-brand-accent font-serif text-3xl font-bold mb-1">3 Mercati</span>
                             <span class="text-[11px] text-brand-textMuted">Italia • Francia • Spagna (Boutique & Dimore)</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Section: AI Threat & Diagnosis -->
+            <!-- Section: The AI Threat & Webmaster Diagnosis -->
             <section class="py-24 px-6 max-w-7xl mx-auto border-b border-brand-border/50">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                     <div class="lg:col-span-5 sticky top-28">
-                        <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">01 / Diagnosi e Indicizzazione AI</span>
+                        <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">01 / Diagnosi Commerciale</span>
                         <h2 class="font-serif text-3xl sm:text-5xl leading-tight text-brand-textPrimary mb-6">
-                            Il costo silenzioso dell'indicizzazione AI e delle traduzioni letterali.
+                            Perché testi generici e IA automatica causano prenotazioni perse.
                         </h2>
                         <p class="text-brand-textMuted font-light text-base leading-relaxed mb-6">
-                            I viaggiatori ad alto patrimonio non utilizzano più i motori di ricerca tradizionali: interrogano piattaforme di concierge IA, Apple Intelligence e LLM per selezionare soggiorni esclusivi in Europa.
+                            I viaggiatori ad alto patrimonio non si affidano più ai motori di ricerca tradizionali; interrogano concierge d'IA e Apple Intelligence per selezionare soggiorni esclusivi (*es. "Consigliami una villa storica e tranquilla sul Lago di Como con molo privato"*).
                         </p>
                         <p class="text-brand-textMuted font-light text-base leading-relaxed">
-                            Quando i sistemi IA rilevano traduzioni automatiche o formule generiche, declassano la struttura, penalizzandone il posizionamento e riducendone la competitività tariffaria.
+                            Quando i modelli di ricerca IA analizzano un sito con traduzioni letterali o formule generiche, declassano la struttura, relegandola tra i risultati di fascia media.
                         </p>
                     </div>
 
                     <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="p-8 rounded-2xl bg-brand-card border border-brand-border">
                             <div class="w-10 h-10 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-sm mb-6">✕</div>
-                            <h3 class="font-serif text-xl text-brand-textPrimary mb-3">La Penalizzazione AI</h3>
+                            <h3 class="font-serif text-xl text-brand-textPrimary mb-3">Il Limite del Webmaster</h3>
                             <p class="text-xs text-brand-textMuted leading-relaxed">
-                                Gli algoritmi valutano il tono e la precisione linguistica. Un inglese dozzinale segnala un livello di servizio inferiore, escludendo la struttura dai consigli di viaggio automatizzati.
+                                I webmaster gestiscono codice, piattaforme CMS (WordPress, Joomla) e prestazioni tecniche. Non sono copywriter o strateghi madrelingua. Chiedere a un webmaster di "generare testi con l'IA" produce contenuti banali che riducono il valore percepito della struttura.
                             </p>
                         </div>
 
                         <div class="p-8 rounded-2xl bg-brand-card border border-brand-border">
                             <div class="w-10 h-10 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-sm mb-6">✕</div>
-                            <h3 class="font-serif text-xl text-brand-textPrimary mb-3">Luoghi Comuni e Cliché</h3>
+                            <h3 class="font-serif text-xl text-brand-textPrimary mb-3">La Trappola dei Servizi</h3>
                             <p class="text-xs text-brand-textMuted leading-relaxed">
-                                Affidarsi a formule vuote come "dotato di ogni comfort" allontana i clienti sofisticati provenienti da Londra, New York e Zurigo.
+                                Elencare freddamente i servizi (*"bagno in marmo, aria condizionata, bella vista"*) non suscita alcun coinvolgimento emotivo nei clienti provenienti da Londra, New York o Zurigo.
                             </p>
                         </div>
 
                         <div class="p-8 rounded-2xl bg-brand-card border border-brand-accent/40 bg-gradient-to-b from-brand-card to-brand-accent/5 sm:col-span-2">
                             <div class="w-10 h-10 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center font-bold text-sm mb-6">✓</div>
-                            <h3 class="font-serif text-2xl text-brand-textPrimary mb-3">Posizionamento Strategico Nativo</h3>
-                            <p class="text-sm text-brand-textMuted leading-relaxed">
-                                Ridefinisco il vostro racconto di marca per garantire autorevolezza assoluta sia di fronte ai clienti internazionali che ai motori di scoperta IA.
+                            <h3 class="font-serif text-2xl text-brand-textPrimary mb-3">Sito Completo + Vantaggio Editoriale</h3>
+                            <p class="text-sm text-brand-textMuted leading-relaxed mb-4">
+                                Riscrivo l'intera narrazione del vostro sito in inglese nativo per stabilire una vera autorità di mercato. Come valore aggiunto strategico, creo articoli editoriali e di blog che alimentano i database dell'IA con dati precisi, garantendo che la vostra struttura venga raccomandata nelle ricerche di zona.
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Confidential Client Endorsements (Testimonials) -->
+            <section class="py-24 px-6 max-w-7xl mx-auto border-b border-brand-border/50">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">02 / Testimonianze Riservate</span>
+                    <h2 class="font-serif text-4xl sm:text-6xl text-brand-textPrimary mb-6">Cosa Dicono i Proprietari</h2>
+                    <p class="text-brand-textMuted font-light text-base leading-relaxed">
+                        Opero nella massima riservatezza. I nomi sono omessi per tutelare la privacy dei clienti e il loro vantaggio competitivo.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-2xl bg-brand-card border border-brand-border flex flex-col justify-between">
+                        <blockquote class="font-serif text-lg text-brand-textPrimary italic mb-6 leading-relaxed">
+                            “Henri ha eliminato le traduzioni piatte fornitedal nostro grafico. Poche settimane dopo il lancio dei nuovi testi in inglese, le richieste dirette da parte di clienti internazionali sono aumentate sensibilmente.”
+                        </blockquote>
+                        <div class="pt-4 border-t border-brand-border/60">
+                            <span class="block text-xs font-mono text-brand-accent uppercase">General Manager</span>
+                            <span class="text-xs text-brand-textMuted">Boutique Resort sul Lago • Lago di Como</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-brand-card border border-brand-border flex flex-col justify-between">
+                        <blockquote class="font-serif text-lg text-brand-textPrimary italic mb-6 leading-relaxed">
+                            “Pensavamo che far usare ChatGPT al webmaster fosse sufficiente. Henri ci ha mostrato come l'IA stesse svalutando il nostro brand. La sua riscrittura ci ha ridato un'autorità immediata.”
+                        </blockquote>
+                        <div class="pt-4 border-t border-brand-border/60">
+                            <span class="block text-xs font-mono text-brand-accent uppercase">Direttore Generale</span>
+                            <span class="text-xs text-brand-textMuted">Tenuta Vinicola & Hotel Storico • Toscana</span>
+                        </div>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-brand-card border border-brand-border flex flex-col justify-between">
+                        <blockquote class="font-serif text-lg text-brand-textPrimary italic mb-6 leading-relaxed">
+                            “Lavorare direttamente con un professionista madrelingua specializzato nell'ospitalità di lusso fa una differenza enorme. Nessuna agenzia di mezzo—solo testi perfetti.”
+                        </blockquote>
+                        <div class="pt-4 border-t border-brand-border/60">
+                            <span class="block text-xs font-mono text-brand-accent uppercase">Proprietario</span>
+                            <span class="text-xs text-brand-textMuted">Chalet di Lusso • Alpi Francesi</span>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
-        <!-- VIEW 2: BEFORE & AFTER -->
+        <!-- VIEW 2: BEFORE & AFTER CRITIQUE STUDIO -->
         <div id="view-proof" class="page-view hidden">
             <section class="py-20 px-6 max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">02 / Trasformazioni Narrative</span>
+                    <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">03 / Trasformazioni Narrative</span>
                     <h2 class="font-serif text-4xl sm:text-6xl text-brand-textPrimary mb-6">Studio Prima e Dopo</h2>
                     <p class="text-brand-textMuted font-light text-base leading-relaxed">
-                        Esaminate la differenza tra le traduzioni standard di agenzia e la riscrittura strategica in inglese.
+                        Confrontate le traduzioni scolastiche con il posizionamento strategico nativo che emoziona l'ospite e alimenta gli algoritmi di ricerca IA.
                     </p>
                 </div>
 
+                <!-- Case Studies -->
                 <div class="space-y-12">
                     <!-- EXAMPLE 1 -->
                     <div class="bg-brand-card rounded-3xl border border-brand-border overflow-hidden p-8 sm:p-12">
                         <div class="flex flex-col lg:flex-row justify-between items-start gap-6 mb-8 border-b border-brand-border pb-6">
                             <div>
                                 <span class="text-xs font-mono text-brand-accent uppercase tracking-widest">Caso Studio #01 • Lago di Como</span>
-                                <h3 class="font-serif text-3xl text-brand-textPrimary mt-1">Villa Storica sul Acqua</h3>
+                                <h3 class="font-serif text-3xl text-brand-textPrimary mt-1">Villa Storica sul Lago</h3>
                             </div>
                             <div class="flex items-center gap-2 bg-brand-bg p-1.5 rounded-full border border-brand-border">
                                 <button onclick="setStudioMode('ex1', 'after')" id="ex1-after-btn" class="px-5 py-2 rounded-full text-xs font-semibold bg-brand-accent text-brand-bg transition-all">Riscrittura di Henri</button>
-                                <button onclick="setStudioMode('ex1', 'before')" id="ex1-before-btn" class="px-5 py-2 rounded-full text-xs font-semibold text-brand-textMuted transition-all">Traduzione Standard</button>
+                                <button onclick="setStudioMode('ex1', 'before')" id="ex1-before-btn" class="px-5 py-2 rounded-full text-xs font-semibold text-brand-textMuted transition-all">Testo Standard</button>
                             </div>
                         </div>
 
                         <div class="mb-8 overflow-hidden rounded-2xl border border-brand-border/60">
-                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=80" alt="Villa sul Lago" class="w-full h-72 sm:h-96 object-cover object-center filter brightness-90">
+                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=80" alt="Villa sul Lago di Como" class="w-full h-72 sm:h-96 object-cover object-center filter brightness-90">
                         </div>
 
                         <div id="ex1-after-box" class="bg-brand-surface p-8 rounded-2xl border border-brand-accent/30">
-                            <span class="text-xs font-mono text-brand-accent block mb-3">POSIZIONAMENTO NATIVO DI LUSSO</span>
+                            <span class="text-xs font-mono text-brand-accent block mb-3">POSIZIONAMENTO NATIVO E INDICIZZATO IA</span>
                             <blockquote class="font-serif text-2xl sm:text-3xl text-brand-textPrimary leading-relaxed italic mb-4">
                                 “Twenty-five private sanctuaries perched above the water, where morning light falls over centuries of quiet stone and private lake views.”
                             </blockquote>
-                            <p class="text-xs text-brand-textMuted">Impatto: Evoca patrimonio storico, privacy e peso architettonico.</p>
+                            <p class="text-xs text-brand-textMuted">Impatto: Trasmette storia, riservatezza e prestigio per attrarre prenotazioni ad alto valore.</p>
                         </div>
 
                         <div id="ex1-before-box" class="hidden bg-red-950/10 p-8 rounded-2xl border border-red-900/30">
@@ -285,7 +324,7 @@
                             <blockquote class="font-serif text-xl text-brand-textMuted leading-relaxed italic mb-4">
                                 “Our hotel offers 25 luxury rooms with marble bathrooms, air conditioning, and beautiful lake views for an unforgettable vacation.”
                             </blockquote>
-                            <p class="text-xs text-red-300/70">Limite: Elenco freddo di servizi privo di risonanza emotiva.</p>
+                            <p class="text-xs text-red-300/70">Limite: Elenco freddo di servizi che l'IA ignora perché privo di valore distintivo.</p>
                         </div>
                     </div>
 
@@ -298,20 +337,20 @@
                             </div>
                             <div class="flex items-center gap-2 bg-brand-bg p-1.5 rounded-full border border-brand-border">
                                 <button onclick="setStudioMode('ex2', 'after')" id="ex2-after-btn" class="px-5 py-2 rounded-full text-xs font-semibold bg-brand-accent text-brand-bg transition-all">Riscrittura di Henri</button>
-                                <button onclick="setStudioMode('ex2', 'before')" id="ex2-before-btn" class="px-5 py-2 rounded-full text-xs font-semibold text-brand-textMuted transition-all">Traduzione Standard</button>
+                                <button onclick="setStudioMode('ex2', 'before')" id="ex2-before-btn" class="px-5 py-2 rounded-full text-xs font-semibold text-brand-textMuted transition-all">Testo Standard</button>
                             </div>
                         </div>
 
                         <div class="mb-8 overflow-hidden rounded-2xl border border-brand-border/60">
-                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80" alt="Rifugio Alpino" class="w-full h-72 sm:h-96 object-cover object-center filter brightness-90">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80" alt="Lodge Vista Lago Alpino" class="w-full h-72 sm:h-96 object-cover object-center filter brightness-90">
                         </div>
 
                         <div id="ex2-after-box" class="bg-brand-surface p-8 rounded-2xl border border-brand-accent/30">
-                            <span class="text-xs font-mono text-brand-accent block mb-3">POSIZIONAMENTO NATIVO DI LUSSO</span>
+                            <span class="text-xs font-mono text-brand-accent block mb-3">POSIZIONAMENTO NATIVO E INDICIZZATO IA</span>
                             <blockquote class="font-serif text-2xl sm:text-3xl text-brand-textPrimary leading-relaxed italic mb-4">
                                 “Untamed shores, crystalline waters, and slow afternoons overlooking mirror-calm alpine depths.”
                             </blockquote>
-                            <p class="text-xs text-brand-textMuted">Impatto: Posiziona la struttura come un rifugio esclusivo e autentico.</p>
+                            <p class="text-xs text-brand-textMuted">Impatto: Posiziona la struttura come un rifugio di lusso autentico ed esclusivo.</p>
                         </div>
 
                         <div id="ex2-before-box" class="hidden bg-red-950/10 p-8 rounded-2xl border border-red-900/30">
@@ -319,34 +358,70 @@
                             <blockquote class="font-serif text-xl text-brand-textMuted leading-relaxed italic mb-4">
                                 “Enjoy our outdoor pool, breakfast sessions by the water, and local comfortable rooms during your holiday.”
                             </blockquote>
-                            <p class="text-xs text-red-300/70">Limite: Banale descrizione da portale di prenotazione generico.</p>
+                            <p class="text-xs text-red-300/70">Limite: Sembra la descrizione di un portale turistico di fascia media.</p>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
-        <!-- VIEW 3: METHOD & PRICING -->
+        <!-- VIEW 3: PROCESS & SCOPE -->
         <div id="view-method" class="page-view hidden">
             <section class="py-20 px-6 max-w-7xl mx-auto">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">03 / Filosofia Operativa</span>
-                    <h2 class="font-serif text-4xl sm:text-6xl text-brand-textPrimary mb-6">Investimento su Misura</h2>
+                    <span class="text-xs font-mono uppercase text-brand-accent tracking-widest block mb-3">04 / Protocollo di Collaborazione in 4 Passi</span>
+                    <h2 class="font-serif text-4xl sm:text-6xl text-brand-textPrimary mb-6">Come Lavoriamo Insieme</h2>
                     <p class="text-brand-textMuted font-light text-base leading-relaxed">
-                        Non sono un traduttore. Sono uno stratega della narrazione di marca e copywriter di lusso. Ogni mandato viene quotato esclusivamente su base progetto.
+                        Un processo semplice e senza complicazioni, pensato per direttori e proprietari che cercano risultati concreti.
                     </p>
                 </div>
 
+                <!-- 4 Steps Process Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <span class="font-mono text-brand-accent text-xs block mb-2">PASSO 01</span>
+                        <h3 class="font-serif text-2xl text-brand-textPrimary mb-3">Audit Riservato</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            Analizzo i testi in inglese del vostro sito e la visibilità nelle ricerche IA per individuare carenze di posizionamento.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <span class="font-mono text-brand-accent text-xs block mb-2">PASSO 02</span>
+                        <h3 class="font-serif text-2xl text-brand-textPrimary mb-3">Strategia Narrativa</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            Definiamo i punti di forza unici della struttura, gli elementi emozionali per gli ospiti e i concetti chiave per l'IA.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <span class="font-mono text-brand-accent text-xs block mb-2">PASSO 03</span>
+                        <h3 class="font-serif text-2xl text-brand-textPrimary mb-3">Esecuzione Diretta</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            Riscrivo direttamente l'intero sito e gli eventuali articoli del blog in un inglese britannico impeccabile.
+                        </p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-brand-card border border-brand-border">
+                        <span class="font-mono text-brand-accent text-xs block mb-2">PASSO 04</span>
+                        <h3 class="font-serif text-2xl text-brand-textPrimary mb-3">Consegna al Webmaster</h3>
+                        <p class="text-xs text-brand-textMuted leading-relaxed">
+                            Consegno i testi pronti e formattati, che il vostro webmaster potrà pubblicare direttamente sul vostro sistema (WordPress, Joomla, ecc.).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Division of Responsibilities Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                     <div class="p-8 rounded-2xl bg-brand-card border border-brand-border flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-start mb-6">
-                                <span class="px-3 py-1 rounded-full bg-brand-surface text-[11px] font-mono text-brand-accent uppercase">Mandato Principale</span>
+                                <span class="px-3 py-1 rounded-full bg-brand-surface text-[11px] font-mono text-brand-accent uppercase">Incarico Principale</span>
                                 <i data-lucide="file-text" class="w-6 h-6 text-brand-accent"></i>
                             </div>
                             <h3 class="font-serif text-3xl text-brand-textPrimary mb-3">Ristrutturazione Narrativa del Sito</h3>
                             <p class="text-xs text-brand-textMuted leading-relaxed mb-6">
-                                Riorganizzazione completa dei testi, posizionamento strategico e copywriting in inglese. Preventivi basati sull'architettura complessiva e sul volume del sito — mai a tariffa per parola.
+                                Riscritura completa di tutte le pagine del sito web in inglese madrelingua. Preventivi formulati esclusivamente su base progetto in base alla complessità del sito—mai a parola.
                             </p>
                         </div>
                         <div class="pt-6 border-t border-brand-border">
@@ -358,31 +433,31 @@
                     <div class="p-8 rounded-2xl bg-brand-card border border-brand-border flex flex-col justify-between">
                         <div>
                             <div class="flex justify-between items-start mb-6">
-                                <span class="px-3 py-1 rounded-full bg-brand-surface text-[11px] font-mono text-brand-accent uppercase">Supporto Opzionale</span>
-                                <i data-lucide="headphones" class="w-6 h-6 text-brand-accent"></i>
+                                <span class="px-3 py-1 rounded-full bg-brand-surface text-[11px] font-mono text-brand-textMuted uppercase">Vantaggio Aggiuntivo</span>
+                                <i data-lucide="book-open" class="w-6 h-6 text-brand-textMuted"></i>
                             </div>
-                            <h3 class="font-serif text-3xl text-brand-textPrimary mb-3">Concierge Operativo e Consulenza</h3>
+                            <h3 class="font-serif text-3xl text-brand-textPrimary mb-3">Articoli Blog e Supporto Desk</h3>
                             <p class="text-xs text-brand-textMuted leading-relaxed mb-6">
-                                Servizio di supporto in lingua nativa, corrispondenza VIP e revisioni stagionali gestiti come accordi separati rispetto al sito web principale.
+                                Redazione opzionale di articoli per il blog pensati per alimentare l'IA, insieme a servizi separati di supporto in lingua madre per la corrispondenza con ospiti VIP.
                             </p>
                         </div>
                         <div class="pt-6 border-t border-brand-border">
                             <span class="text-xs text-brand-textMuted font-mono block">Modello di Investimento</span>
-                            <span class="text-xl font-serif text-brand-accent font-semibold">Opzione di Retainer Mensile</span>
+                            <span class="text-xl font-serif text-brand-textMuted font-semibold">Servizi su Retainer Opzionali</span>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
 
-        <!-- AUDIT FORM -->
+        <!-- Section: Interactive Audit Request Form -->
         <section id="audit" class="py-24 px-6 max-w-4xl mx-auto border-t border-brand-border">
             <div class="bg-brand-card rounded-3xl p-8 sm:p-12 border border-brand-accent/30 relative overflow-hidden">
                 <div class="max-w-xl mb-10">
-                    <span class="text-xs font-mono text-brand-accent uppercase tracking-widest block mb-2">Engagement Diretto</span>
+                    <span class="text-xs font-mono text-brand-accent uppercase tracking-widest block mb-2">Contatto Diretto</span>
                     <h2 class="font-serif text-3xl sm:text-5xl text-brand-textPrimary mb-4">Richiesta di Audit Riservato</h2>
                     <p class="text-xs sm:text-sm text-brand-textMuted">
-                        Inviate i vostri dati per ricevere una revisione confidenziale dell'impronta narrativa in inglese e dell'indice di scoperta AI.
+                        Inviate i vostri dati per ricevere una revisione confidenziale dell'impronta narrativa in inglese e del posizionamento della vostra struttura.
                     </p>
                 </div>
 
@@ -410,7 +485,7 @@
                         </div>
                         <div>
                             <label class="block text-xs font-mono uppercase text-brand-textMuted mb-2">Sito Web (URL)</label>
-                            <input type="url" name="_replyto" required placeholder="https://vostrastruttura.it" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-textPrimary placeholder:text-brand-textMuted/40 gold-border-glow">
+                            <input type="url" name="website_url" required placeholder="https://vostrastruttura.it" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-sm text-brand-textPrimary placeholder:text-brand-textMuted/40 gold-border-glow">
                         </div>
                     </div>
 
